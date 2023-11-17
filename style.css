@@ -1,0 +1,123 @@
+/* Reset */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+header,footer{
+    background-color: white;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header .container-header{
+    display: flex;
+    padding: 10px;
+}
+
+header .container-header .container-logo{
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+
+}
+
+header .container-header .container-logo img{
+    width: 60px;
+    margin: 0px 25px;
+  
+}
+
+header .container-header .container-select{
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: end;
+    padding-right: 25px;
+}
+
+header .container-header .container-select select{
+    height: 30px;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+header .container-header .container-select input{
+    height: 30px;
+    background-color: rgb(255, 225, 0);
+    border: 1px solid grey;
+    border-radius: 20%;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+header .container-header .container-select input:active{
+    background-color: rgb(51, 51, 211);
+    transform: translateY(2px);
+    box-shadow: 0 3px #666;
+}
+
+/* Main */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #7fffd4;
+}
+    
+
+main .game-grid{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 600px;
+    height: 600px;
+    background-color: lightcoral;
+}
+
+
+/* Cells class */
+
+main .game-grid .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #7fffd4;
+}
+
+main .game-grid .cell:active{
+    background-color: rgb(118, 118, 118);
+    color: yellow;
+    transform: translateY(2px);
+}
+
+
+main .game-grid .cell.easy{
+    height: calc(100%/10);
+    width: calc(100%/10);
+}
+
+main .game-grid .cell.medium{
+    height: calc(100%/9);
+    width: calc(100%/9);
+}
+
+main .game-grid .cell.hard{
+    height: calc(100%/7);
+    width: calc(100%/7);
+}
